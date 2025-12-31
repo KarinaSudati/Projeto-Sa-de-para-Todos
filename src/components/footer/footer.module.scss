@@ -1,212 +1,125 @@
-/* Variáveis de cor (mantidas do estilo escuro anterior) */
-$cor-fundo: #111111;
-$cor-texto-claro: #f0f0f0;
-$cor-destaque: #008080;
-$max-width-conteudo: 1100px; // Largura máxima para centralizar o conteúdo
-
-footer {
-  background-color: $cor-fundo;
-  color: $cor-texto-claro;
-  padding: 40px 20px 0;
-  font-family: Arial, sans-serif;
+.mainFooter {
+  background-color: #1a1a1a;
+  color: white;
+  padding-top: 4rem;
 }
 
-/* Container para as colunas (Desktop Layout) */
-.colunas-container {
+.contentWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 0 auto 40px; /* Centraliza o container horizontalmente e adiciona margem inferior */
-  max-width: $max-width-conteudo;
-  padding: 0 20px; /* Padding interno para evitar que o conteúdo toque as bordas da tela */
-}
-
-/* 1. Estilizando a Primeira Coluna (Logo/Descrição/Contato) */
-.boxFooter {
-  display: flex; /* Transforma o .boxFooter em um container flexível interno */
-  flex-direction: column;
-  gap: 15px; /* Espaço entre Logo, Descrição e Contato */
-}
-
-/* 1A. Logo e Título */
-.boxFooter > img:first-child {
-  // Seu logo coração
-  display: none; // Escondendo o logo original para usar dentro do Link abaixo
-}
-
-.boxFooter > a {
-  // "Médicos & Dentista"
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  color: $cor-texto-claro;
-  text-decoration: none;
-  font-size: 1rem;
-
-  /* Injetando o ícone do logo como fundo ou usando ::before/::after
-       * Como você tem a tag <img> separada do <a> no seu JSX,
-       * a estilização acima é um pouco complexa.
-       * O ideal é reestruturar o JSX, como no Exemplo B.
-       * Por enquanto, vamos manter o <img> separado e alinhá-los em desktop.
-    */
-}
-
-/* Ajuste temporário para o logo e link juntos (apenas no desktop) */
-@media (min-width: 768px) {
-  .boxFooter > img:first-child {
-    display: block; // Mostra o logo
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-    align-self: flex-start; /* Alinha o logo no topo */
-  }
-
-  .boxFooter {
-    /* Se o logo e o link estiverem irmãos, precisamos de um container flexível pai */
-    /* Devido à estrutura do seu JSX original, o alinhamento 
-           do Logo e do Link lado a lado é difícil sem envolver ambos em um div. */
-  }
-}
-
-/* 1B. Parágrafo de descrição */
-.boxFooter > p {
-  color: lighten($cor-texto-claro, 20%);
-  font-size: 0.9rem;
-  line-height: 1.4;
-  max-width: 250px;
-}
-
-/* 1C. Lista de Contato */
-.boxFooter ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px; /* Adiciona espaço após a descrição */
-}
-
-.boxFooter ul h4 {
-  color: $cor-texto-claro;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.boxFooter li > div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 0.9rem;
-}
-
-.boxFooter li img {
-  width: 16px;
-  height: 16px;
-  margin-right: 15px;
-}
-
-.boxFooter li p {
-  margin: 0;
-}
-
-/* 2. Estilizando a Segunda Coluna (Redes Sociais) */
-.columFooter {
-  /* É a segunda coluna. No layout desktop, estará à direita */
-}
-
-.columFooter h3 {
-  color: $cor-texto-claro;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.columFooter ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.columFooter li {
-  margin-bottom: 10px;
-}
-
-.columFooter a {
-  color: $cor-texto-claro;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.columFooter a:hover {
-  color: $cor-destaque;
-}
-
-/* Layout para telas maiores (Desktop) - Alinhamento das colunas */
-@media (min-width: 768px) {
-  /* Envolve as duas colunas principais para alinhar (o ideal seria 3, mas o JSX só tem 2) */
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo (colunas e bottomFooter) */
-    padding: 40px 0 0;
-  }
-
-  .colunas-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Espaço entre os blocos */
-    width: 100%;
-    gap: 50px;
-    /* Precisamos reestruturar o conteúdo do .boxFooter no JSX para 3 colunas */
-    /* Como o .boxFooter já tem Logo, Descrição e Contato, ele está grande. */
-
-    /* Para simular 3 colunas, precisamos de margens/larguras específicas: */
-    .boxFooter {
-      flex-basis: 50%; /* Ocupa metade da largura para logo/descrição/contato */
-      display: grid; /* Usamos grid para posicionar Logo/Desc e Contato */
-      grid-template-areas:
-        "logo contato"
-        "desc contato";
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .boxFooter > img:first-child {
-      grid-area: logo;
-      width: 30px;
-      height: 30px;
-    }
-
-    .boxFooter > a {
-      grid-area: logo;
-      margin-left: 40px; /* Move o link ao lado do logo */
-    }
-
-    .boxFooter > p {
-      grid-area: desc;
-      max-width: 250px;
-    }
-
-    .boxFooter ul {
-      grid-area: contato; /* A lista de contato ocupa a segunda coluna */
-    }
-
-    .columFooter {
-      flex-basis: 20%; /* Ocupa a última parte para Redes Sociais */
-      margin-left: auto; /* Empurra para a direita */
-    }
-  }
-}
-
-/* Barra inferior (Direitos Autorais) */
-.bottomFooter {
-  border-top: 1px solid $cor-destaque;
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 0.8rem;
-  color: lighten($cor-texto-claro, 20%);
-}
-
-.bottomFooter p {
-  max-width: $max-width-conteudo;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 3rem 4rem;
+  flex-wrap: wrap;
+}
+
+.boxFooter,
+.columFooter {
+  flex-basis: 30%;
+  min-width: 200px;
+
+  h3,
+  h4 {
+    color: white;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.boxFooter {
+  p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    max-width: 250px;
+  }
+
+  .Logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    filter: brightness(0) invert(1);
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+}
+
+.bottomFooter {
+  background-color: #111;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 900px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.5rem 3rem;
+  }
+
+  .boxFooter,
+  .columFooter {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .Logo,
+  .contactItem {
+    justify-content: center;
+  }
 }

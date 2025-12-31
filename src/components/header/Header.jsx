@@ -4,13 +4,14 @@ import S from "./header.module.scss";
 
 export default function Header() {
   return (
-    <header>
+    <header className={S.header}>
       <div className={S.boxLogo}>
-        <img src={Logo} alt="logo do site, coração verde" />
+        <img src={Logo} alt="logo do site, coração verde" width={30} />
         <Link to="/">Médicos & Dentista</Link>
       </div>
-      <nav>
-        <Link to="/">Home</Link>
+
+      <nav className={S.nav}>
+        <Link to="/">Início</Link>
         <Link to="/voluntario">Seja Voluntário</Link>
       </nav>
     </header>
