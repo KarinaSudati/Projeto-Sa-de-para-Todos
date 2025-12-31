@@ -1,6 +1,16 @@
 🏥 Médicos & Dentistas pela Comunidade
 Status do Projeto: 🚀 Em desenvolvimento... 
 
+<img width="393" height="583" alt="Captura de tela 2025-12-31 110343" src="https://github.com/user-attachments/assets/272daeaa-dd28-4fca-8f88-b519968701f7" />
+
+
+
+
+
+
+https://projeto-sa-de-para-todos.vercel.app/
+
+
 O projeto Médicos & Dentistas é uma plataforma web voltada para conectar profissionais da saúde a comunidades que necessitam de atendimento gratuito ou acessível. O foco é a responsividade, usabilidade e um design limpo voltado para o bem-estar.
 
 🎨 Layout do Projeto
