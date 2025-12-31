@@ -42,26 +42,22 @@ Footer Modular: Rodapé organizado em colunas com informações de contato e red
 
 🚀 Como rodar o projeto localmente
 Clone o repositório:
-
 Bash
 
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+
 Entre na pasta do projeto:
 
 Bash
-
 cd nome-do-repositorio
+
 Instale as dependências:
-
-Bash
-
 npm install
+
 Inicie o servidor de desenvolvimento:
-
-Bash
-
 npm run dev
-Abra o navegador no endereço indicado (geralmente http://localhost:5173).
+
 
 📂 Estrutura de Pastas
 Plaintext
