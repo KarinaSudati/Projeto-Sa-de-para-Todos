@@ -59,25 +59,26 @@ export default function Home() {
         <p className={S.impacto_text}>
           Transformando a saúde de nossa comunidade, um paciente de cada vez
         </p>
+
+        <div className={S.impacto_cards}>
+          <article className={S.impacto_card}>
+            <h3>2,500+</h3>
+            <p>Pessoas Atendidas</p>
+          </article>
+          <article className={S.impacto_card}>
+            <h3>150+</h3>
+            <p>Profissionais Voluntários</p>
+          </article>
+          <article className={S.impacto_card}>
+            <h3>98%</h3>
+            <p>Satisfação dos Pacientes</p>
+          </article>
+          <article className={S.impacto_card}>
+            <h3>5+</h3>
+            <p>Anos de Dedicação</p>
+          </article>
+        </div>
       </section>
-      <div className={S.impacto_cards}>
-        <article className={S.impacto_card}>
-          <h3>2,500+</h3>
-          <p>Pessoas Atendidas</p>
-        </article>
-        <article className={S.impacto_card}>
-          <h3>150+</h3>
-          <p>Profissionais Voluntários</p>
-        </article>
-        <article className={S.impacto_card}>
-          <h3>98%</h3>
-          <p>Satisfação dos Pacientes</p>
-        </article>
-        <article className={S.impacto_card}>
-          <h3>5+</h3>
-          <p>Anos de Dedicação</p>
-        </article>
-      </div>
     </main>
   );
 }
