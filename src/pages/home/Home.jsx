@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
       <section className={S.hero}>
         <div className={S.content}>
           <div>
@@ -18,7 +18,7 @@ export default function Home() {
           </p>
           <div className={S.boxButton}>
             <Link to="/voluntario">Seja Voluntário</Link>
-            <a href="">Como Ajudar</a>
+            <a href="#top">Como Ajudar</a>
           </div>
         </div>
         <div className={S.imgMedico}>

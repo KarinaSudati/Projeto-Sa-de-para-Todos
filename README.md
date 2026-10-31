@@ -1,76 +1,96 @@
-🏥 Médicos & Dentistas pela Comunidade
-Status do Projeto: 🚀 Em desenvolvimento... 
+# Médicos & Dentistas pela Comunidade
 
-<img width="393" height="583" alt="Captura de tela 2025-12-31 110343" src="https://github.com/user-attachments/assets/272daeaa-dd28-4fca-8f88-b519968701f7" />
+Uma plataforma web voltada para conectar profissionais da saúde a comunidades que necessitam de atendimento gratuito ou acessível, promovendo acesso à saúde e apoio social por meio de uma experiência digital simples, acessível e confiável.
 
+Status do projeto: 🚀 Em desenvolvimento
 
-
-
-
-
+Acesse o projeto em produção:
 https://projeto-sa-de-para-todos.vercel.app/
 
+## Visão geral
 
-O projeto Médicos & Dentistas é uma plataforma web voltada para conectar profissionais da saúde a comunidades que necessitam de atendimento gratuito ou acessível. O foco é a responsividade, usabilidade e um design limpo voltado para o bem-estar.
+O projeto foi idealizado para fortalecer a relação entre a comunidade e profissionais de saúde, com foco em acessibilidade, clareza de comunicação e uma interface moderna. A solução busca facilitar a captação de voluntários, apresentar a missão da iniciativa e criar uma experiência agradável para usuários em diferentes dispositivos.
 
-🎨 Layout do Projeto
-O design foi focado em transmitir confiança e higiene, utilizando uma paleta de cores baseada no verde saúde (#00745a) e branco, com tipografia legível e ícones intuitivos.
+## Objetivos
 
-🛠️ Tecnologias Utilizadas
-Este projeto foi construído utilizando as melhores práticas de desenvolvimento moderno:
+- Contribuir para o acesso à saúde em comunidades vulneráveis;
+- Conectar profissionais de saúde e voluntários;
+- Apresentar a proposta da organização de forma clara e impactante;
+- Garantir uma navegação intuitiva e responsiva;
+- Reforçar confiança, empatia e cuidado por meio do design.
 
-React.js: Biblioteca principal para construção da interface.
+## Principais funcionalidades
 
-Sass (SCSS): Pré-processador CSS para uma estilização modular e organizada.
+- Landing page institucional com apresentação da missão e impacto social;
+- Página de voluntariado com formulário para cadastro de profissionais;
+- Layout responsivo para desktop, tablet e mobile;
+- Navegação organizada entre páginas e seções;
+- Footer informativo com contato e redes sociais;
+- Design visual focado em saúde, confiança e acolhimento.
 
-CSS Modules: Garante que os estilos sejam escopados por componente, evitando conflitos de classes.
+## Stack tecnológica
 
-React Router Dom: Gerenciamento de rotas e navegação entre páginas.
+- React.js
+- Vite
+- React Router DOM
+- Sass (SCSS)
+- CSS Modules
 
-Vite: Ferramenta de build extremamente rápida para o desenvolvimento.
+## Estrutura do projeto
 
-✨ Funcionalidades
-Página Home: Apresentação da missão, impacto social e chamadas para ação (CTA).
-
-Página de Voluntariado: Formulário completo para cadastro de novos profissionais, com layout otimizado para preenchimento.
-
-Responsividade Total: Interface adaptável para celulares, tablets e desktops (Flexbox).
-
-Navegação Inteligente: Sistema de rotas que permite transições suaves entre as seções.
-
-Footer Modular: Rodapé organizado em colunas com informações de contato e redes sociais.
-
-🚀 Como rodar o projeto localmente
-Clone o repositório:
-Bash
-
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-
-
-Entre na pasta do projeto:
-
-Bash
-cd nome-do-repositorio
-
-Instale as dependências:
-npm install
-
-Inicie o servidor de desenvolvimento:
-npm run dev
-
-
-📂 Estrutura de Pastas
-Plaintext
-
+```text
 src/
-├── assets/             # Imagens e ícones
-├── components/         # Componentes reutilizáveis (Header, Footer)
-├── pages/              # Páginas da aplicação (Home, Voluntario)
-├── styles/             # Estilos globais e variáveis
-└── App.jsx             # Configuração de rotas e estrutura principal
+├── assets/                 # Imagens, ícones e recursos visuais
+├── components/
+│   ├── footer/             # Componente de rodapé
+│   └── header/            # Componente de cabeçalho
+├── pages/
+│   ├── home/              # Página inicial
+│   └── voluntario/        # Página de voluntariado
+├── App.jsx                # Configuração principal da aplicação
+├── globalStyle.scss       # Estilos globais
+├── main.jsx               # Entrada da aplicação
+└── ...
+```
 
+## Como executar localmente
 
-👨‍💻 Autor
-Desenvolvido por Seu Nome: Karina Sudati 🚀🚀🚀
+### 1. Clone o repositório
 
-LinkedIn: https://www.linkedin.com/in/karina-sudati-fron-end/
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
+
+### 2. Acesse a pasta do projeto
+
+```bash
+cd nome-do-repositorio
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Inicie o servidor de desenvolvimento
+
+```bash
+npm run dev
+```
+
+O projeto ficará disponível em `http://localhost:5173` (ou outra porta definida pelo Vite).
+
+## Design e experiência
+
+A identidade visual foi pensada para transmitir confiança, segurança e cuidado. A paleta de cores baseia-se em tons de verde associados à saúde, com contraste em branco para manter legibilidade e uma percepção limpa e profissional.
+
+## Autor
+
+Desenvolvido por Karina Sudati.
+
+- LinkedIn: https://www.linkedin.com/in/karina-sudati-fron-end/
+
+## Licença
+
+Este projeto é destinado a fins educacionais e de demonstração.
